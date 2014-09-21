@@ -5,8 +5,6 @@ gem 'rails', '4.1.5'
 gem 'unicorn'
 
 gem 'rake'
-gem 'mysql2'
-gem 'pg'
 gem 'json'
 gem 'grape'
 gem 'grape-entity'
@@ -17,6 +15,7 @@ gem 'figaro'
 gem 'bcrypt'
 
 group :development do
+  gem 'pg'
   gem 'spring'
   gem 'brakeman'
   gem 'capistrano'
@@ -26,6 +25,7 @@ group :development do
 end
 
 group :staging, :production  do
+  gem 'mysql2'
   gem 'newrelic_rpm'
   gem 'newrelic-grape'
   gem 'rack-cors'
